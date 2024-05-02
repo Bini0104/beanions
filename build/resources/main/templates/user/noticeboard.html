@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>공지사항 게시판</h1>
+    <table align="center" border="">
+        <tr>
+            <td>NO</td>
+            <td>제목</td>
+            <td>글쓴이</td>
+            <td>작성시간</td>
+        </tr>
+        <tr th:each="post : ${ noticeboard }">
+            <td th:text="${post.postCode}"></td>
+            <td th:text="${post.postTitle}"></td>
+            <th th:text="${post.memberCode}"></th>
+            <td th:text="${post.postDate}"></td>
+        </tr>
+    </table>
+</body>
+</html>
